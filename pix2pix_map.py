@@ -95,7 +95,8 @@ print("Execution time is: ", execution_time)
 
 from keras.models import load_model
 from numpy.random import randint
-model = load_model('saved_model_10epochs.h5')
+# model = load_model('saved_model_10epochs.h5')
+model = load_model("model_010960.h5")
 
 # plot source, generated and target images
 def plot_images(src_img, gen_img, tar_img):
