@@ -24,6 +24,7 @@ def generate_and_display_images(uploaded_file):
         # st.image(uploaded_file)
         src_img = Image.open(uploaded_file)
         src_img = src_img.resize((256,256))
+        src_img = src_img.convert("RGB")
         src_img = np.array(src_img)
         src_img = np.expand_dims(src_img, axis=0)
         
