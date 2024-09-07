@@ -14,6 +14,7 @@ from keras.preprocessing.image import load_img
 from numpy import savez_compressed
 from matplotlib import pyplot
 import numpy as np
+from pix2pix_model import define_discriminator, define_generator, define_gan, train
 
 # load all images in a directory into memory
 def load_images(path, size=(256,512)):
@@ -50,7 +51,6 @@ pyplot.show()
 
 #######################################
 
-from pix2pix_model import define_discriminator, define_generator, define_gan, train
 # define input shape based on the loaded dataset
 image_shape = src_images.shape[1:]
 # define the models
